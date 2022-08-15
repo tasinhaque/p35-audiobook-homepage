@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  <!-- 35th project  -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,6 +41,39 @@
         </div>
     </div>
 
+    <div class="library" id="library">
+        <div class="container">
+
+            <div class="iconbox">
+                <i class="far fa-play-circle"></i><span>Play</span>
+            </div>
+
+
+            <div class="iconbox">
+                <i class="fas fa-headphones-alt"></i><span>Hear</span>
+            </div>
+
+
+            <div class="iconbox">
+                <i class="fas fa-cloud-download"></i><span>Download</span>
+            </div>
+
+
+            <div class="iconbox">
+                <i class="fas fa-clock"></i><span>Anytime</span>
+            </div>
+
+
+            <div class="iconbox">
+                <i class="fas fa-globe-asia"></i><span>Anywhere</span>
+            </div>
+            
+
+
+
+        </div>
+    </div>
+
 
     <h1 class="sectitle">Choose Your Plan</h1>
 
@@ -74,7 +107,7 @@
 
 
         <div class="plan-card">
-            <h2 class="plan-title">$ 4.95/Month</h2>
+            <h2 class="plan-title">$4.95/Month</h2>
             <div class="available">
                 <ul>
                     <li><i class="fas fa-check-circle"></i> 50GB Storage</li>
@@ -97,7 +130,7 @@
 
 
         <div class="plan-card">
-            <h2 class="plan-title">$ 50.0/Year</h2>
+            <h2 class="plan-title">$50.0/Year</h2>
             <div class="available">
                 <ul>
                     <li><i class="fas fa-check-circle"></i> Unlimited Storage</li>
@@ -121,6 +154,27 @@
 
 
     </div>
+
+    <div class="visitor">
+        <h3>This page was visited</h3>
+        <h2 id="count">65</h2>
+        <h3>Times</h3>
+    </div>
+
+
+    <script>
+        const countEl = document.getElementById("count");
+        countvisits();
+
+        function countvisits() {
+            fetch('https://api.countapi.xyz/update/audioverse/book/?amount=1')
+            .then((res) => res.json())
+            .then((res) => {
+                countEl.innerHTML = res.value;
+
+            });
+        }
+    </script>
 
 </body>
 
